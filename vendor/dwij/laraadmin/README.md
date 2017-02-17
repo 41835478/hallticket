@@ -12,7 +12,7 @@
 
 LaraAdmin is a Open source CRM for quick-start Admin based applications with features like Advanced CRUD Generation, Schema Manager and Workflows.
 ##### Website: [laraadmin.com](http://laraadmin.com)
-##### Creator: [@gdbhosale](https://github.com/gdbhosale), [Dwij IT Solutions](https://github.com/dwijitsolutions)
+##### Creator: [@gdbhosale](https://github.com/gdbhosale), [Technoartista](https://github.com/dwijitsolutions)
 --------
 
 ### Features:
@@ -71,7 +71,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <p align="center">
   <br>
   Brought to you by<br>
-  <a href="http://dwijitsolutions.com">
-  <img src="http://dwijitsolutions.com/wp-content/uploads/2016/01/dwij-it-solutions.png">
+  <a href="http://technoartista.com">
+  <img src="http://technoartista.com/wp-content/uploads/2016/01/dwij-it-solutions.png">
   </a>
 </p>
