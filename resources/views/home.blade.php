@@ -10,13 +10,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="{{ LAConfigs::getByKey('site_description') }}" />
     
-    <meta property="og:url" content="http://laraadmin.com/" />
-    <meta property="og:sitename" content="laraAdmin" />
-	<meta property="og:image" content="http://demo.adminlte.acacha.org/img/LaraAdmin-600x600.jpg" />
+    <meta property="og:url" content="http://technoartista.com/" />
+    <meta property="og:sitename" content="technoartista" />
+	<meta property="og:image" content="http://demo.adminlte.acacha.org/img/app-bg.png" />
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@laraadmin" />
-    <meta name="twitter:creator" content="@laraadmin" />
+    <meta name="twitter:site" content="@technoartista" />
+    <meta name="twitter:creator" content="@technoartista" />
     
     <title>{{ LAConfigs::getByKey('sitename') }}</title>
     
@@ -76,7 +76,7 @@
                 <h1>{{ LAConfigs::getByKey('sitename_part1') }} <b><a>{{ LAConfigs::getByKey('sitename_part2') }}</a></b></h1>
                 <h3>{{ LAConfigs::getByKey('site_description') }}</h3>
                 <h3>@if (Auth::guest())
-                    <li><a href="{{ url('/login') }}">Login</a></li>
+                    <h3><a href="{{ url('/login') }}">Login</a></h3>
                     <!--<li><a href="{{ url('/register') }}">Register</a></li>-->
                 @else
                     <h3><a href="{{ url(config('laraadmin.adminRoute')) }}">Get Started</a></h3>
