@@ -6,7 +6,6 @@ Route::get('/home', 'HomeController@index');
 Route::auth();
 
 /* ================== Access Uploaded Files ================== */
-Route::get('files/{hash}/{name}', 'LA\UploadsController@get_file');
 
 /*
 |--------------------------------------------------------------------------
@@ -33,14 +32,6 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::resource(config('laraadmin.adminRoute') . '/users', 'LA\UsersController');
 	Route::get(config('laraadmin.adminRoute') . '/user_dt_ajax', 'LA\UsersController@dtajax');
 	
-	/* ================== Uploads ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/uploads', 'LA\UploadsController');
-	Route::post(config('laraadmin.adminRoute') . '/upload_files', 'LA\UploadsController@upload_files');
-	Route::get(config('laraadmin.adminRoute') . '/uploaded_files', 'LA\UploadsController@uploaded_files');
-	Route::post(config('laraadmin.adminRoute') . '/uploads_update_caption', 'LA\UploadsController@update_caption');
-	Route::post(config('laraadmin.adminRoute') . '/uploads_update_filename', 'LA\UploadsController@update_filename');
-	Route::post(config('laraadmin.adminRoute') . '/uploads_update_public', 'LA\UploadsController@update_public');
-	Route::post(config('laraadmin.adminRoute') . '/uploads_delete_file', 'LA\UploadsController@delete_file');
 	
 	/* ================== Roles ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/roles', 'LA\RolesController');
@@ -61,13 +52,18 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::get(config('laraadmin.adminRoute') . '/employee_dt_ajax', 'LA\EmployeesController@dtajax');
 	Route::post(config('laraadmin.adminRoute') . '/change_password/{id}', 'LA\EmployeesController@change_password');
 	
-	/* ================== Organizations ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/organizations', 'LA\OrganizationsController');
-	Route::get(config('laraadmin.adminRoute') . '/organization_dt_ajax', 'LA\OrganizationsController@dtajax');
 
 	/* ================== Backups ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/backups', 'LA\BackupsController');
 	Route::get(config('laraadmin.adminRoute') . '/backup_dt_ajax', 'LA\BackupsController@dtajax');
 	Route::post(config('laraadmin.adminRoute') . '/create_backup_ajax', 'LA\BackupsController@create_backup_ajax');
 	Route::get(config('laraadmin.adminRoute') . '/downloadBackup/{id}', 'LA\BackupsController@downloadBackup');
+
+	/* ================== Student_Datas ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/student_datas', 'LA\Student_DatasController');
+	Route::get(config('laraadmin.adminRoute') . '/student_data_dt_ajax', 'LA\Student_DatasController@dtajax');
+
+	/* ================== Seating_Datas ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/seating_datas', 'LA\Seating_DatasController');
+	Route::get(config('laraadmin.adminRoute') . '/seating_data_dt_ajax', 'LA\Seating_DatasController@dtajax');
 });
